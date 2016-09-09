@@ -11,7 +11,7 @@ from lib import actions
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'hard to guess string'
- 
+
 manager = Manager(app)
 bootstrap = Bootstrap(app)
 moment = Moment(app)
