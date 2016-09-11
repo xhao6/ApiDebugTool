@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
 
-{% block title %}露脸云接口调试工具{% endblock %}
+{% block title %}填写参数{% endblock %}
 
 {% block page_content %}
 <div class="page-header">
@@ -11,9 +11,7 @@
 </div>
 {{ wtf.quick_form(form) }}
 </br></br></br>
-<div class="page-hint">
-    <p>
-        <a href="/opendoc" class="hint">点此查看API调试开发文档</a>
-    </p>
-</div>
+<p>调试结果
+    </br></br> {{ response }}
+</p>
 {% endblock %}

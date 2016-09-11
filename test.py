@@ -1,8 +1,8 @@
 import requests
 
 # get token
-# app_info = {"app_id": "203228","app_secret": "fbe54068c5eafd5262ff169a1682cca2"}
-# r = requests.post('http://127.0.0.1:5000/api/token', data=app_info)
+app_info = {"app_id": "203228","app_secret": "fbe54068c5eafd5262ff169a1682cca2"}
+r = requests.post('http://127.0.0.1:5001/api/token', data=app_info)
 
 token = "{'Authorization': 'Bearer 4698fe32-664c-4ba3-9ec7-8b505cd98a11'}"
 session = "d8571c804999416e92e3007ccc494b25"
@@ -42,8 +42,8 @@ session = "d8571c804999416e92e3007ccc494b25"
 # r = requests.post('http://127.0.0.1:5000/api/group/remove', data=data)
 
 # exit group
-data = {"token": token, "session": session, "group_id": "7b5ee230763c11e69c76a9e0fa8991a0"}
-r = requests.post('http://127.0.0.1:5000/api/group/exit', data=data)
+# data = {"token": token, "session": session, "group_id": "7b5ee230763c11e69c76a9e0fa8991a0"}
+# r = requests.post('http://127.0.0.1:5000/api/group/exit', data=data)
 
 
 print r.text
