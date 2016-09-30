@@ -20,25 +20,25 @@ def index():
     category_form = CategoryForm()
     if category_form.validate_on_submit():
         if category_form.api_name.data == 'get_token':
-            return redirect(url_for('param_get_token'))
+            return redirect(url_for('main.param_get_token'))
         if category_form.api_name.data == 'create_user':
-            return redirect(url_for('param_create_user'))
+            return redirect(url_for('main.param_create_user'))
         if category_form.api_name.data == 'update_session':
-            return redirect(url_for('param_update_session'))
+            return redirect(url_for('main.param_update_session'))
         if category_form.api_name.data == 'update_nickname':
-            return redirect(url_for('param_update_nickname'))
+            return redirect(url_for('main.param_update_nickname'))
         if category_form.api_name.data == 'create_group':
-            return redirect(url_for('param_create_group'))
+            return redirect(url_for('main.param_create_group'))
         if category_form.api_name.data == 'update_group':
-            return redirect(url_for('param_update_group'))
+            return redirect(url_for('main.param_update_group'))
         if category_form.api_name.data == 'group_info':
-            return redirect(url_for('param_get_group_info'))
+            return redirect(url_for('main.param_get_group_info'))
         if category_form.api_name.data == 'join_group':
-            return redirect(url_for('param_join_group'))
+            return redirect(url_for('main.param_join_group'))
         if category_form.api_name.data == 'remove_user_from_group':
-            return redirect(url_for('param_remove_member_from_group'))
+            return redirect(url_for('main.param_remove_member_from_group'))
         if category_form.api_name.data == 'exit_group':
-            return redirect(url_for('param_exit_group'))
+            return redirect(url_for('main.param_exit_group'))
     return render_template('index.html', form=category_form, data = data)
 
 
