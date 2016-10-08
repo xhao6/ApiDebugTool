@@ -17,7 +17,7 @@ manager = Manager(app)
 bootstrap = Bootstrap(app)
 moment = Moment(app)
 url = "https://cloudcn.v5.cn"
-server = "http://192.168.1.171:5000"
+
 
 
 

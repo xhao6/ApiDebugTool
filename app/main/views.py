@@ -4,8 +4,12 @@ from flask import render_template, session, redirect, url_for
 from . import main
 from .forms import *
 import requests
+import pyperclip
 
 server = "http://192.168.1.171:5000"
+
+# Test URL
+# server = "http://127.0.0.1:5000"
 
 
 @main.route('/opendoc', methods=['GET', 'POST'])
@@ -53,6 +57,10 @@ def param_get_token():
         request_url = server + '/api/token'
         print "- %r" % request_url
         response = requests.post(request_url, data=data).text
+        print form.copy.data
+        if form.copy.data:
+            # print "copying response to the clipboard."
+            pyperclip.copy(response)
     return render_template('step2.html', form = form, response = response)
 
 

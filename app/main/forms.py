@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from flask_wtf import Form
-from wtforms import StringField, SubmitField, SelectField
+from wtforms import StringField, SubmitField, SelectField, BooleanField
 from wtforms.validators import Required, DataRequired
 
 
@@ -15,6 +15,7 @@ class CategoryForm(Form):
 class ParameterGetTokenForm(Form):
     app_id = StringField(u'Step.2 输入API参数：</br ></br >appid:', validators=[Required()])
     secret = StringField('secret:', validators=[Required()])
+    copy = BooleanField(label=u'将返回的token复制到剪贴板，供后续使用')
     submit = SubmitField(u'测试')
 
 
