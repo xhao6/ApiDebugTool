@@ -6,10 +6,10 @@ from .forms import *
 import requests
 import pyperclip
 
-server = "http://192.168.1.171:5000"
+server = "http://api-test.xhao.me"
 
 # Test URL
-# server = "http://127.0.0.1:5000"
+#server = "http://127.0.0.1:5000"
 
 
 @main.route('/opendoc', methods=['GET', 'POST'])

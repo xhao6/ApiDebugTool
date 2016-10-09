@@ -5,7 +5,7 @@ from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from flask_script import Manager
 
-from lib import actions
+import actions
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'hard to guess string'
@@ -16,9 +16,9 @@ url = "https://cloudcn.v5.cn"
 api_error_message = u"输入错误，请检查接口参数"
 
 
-@app.route('/api/helloworld')
+@app.route('/')
 def hello():
-    return 'helloworld'
+    return 'Hi man! This is API service. </br>For test, go to the following site. </br> api-test.xhao.me/test'
 
 
 @app.route('/api/token', methods=['POST'])
